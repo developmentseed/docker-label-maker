@@ -1,0 +1,43 @@
+{
+	"country": "monaco",
+	"bounding_box": [
+		7.3323441,43.708370,7.4888992,43.777819
+	],
+	"zoom": 12,
+	"classes": [
+		{
+			"name": "Buildings",
+			"filter": [
+				"any",
+				[
+					"==",
+					"amenity",
+					"hospital"
+				],
+				[
+					"==",
+					"amenity",
+					"university"
+				],
+				[
+					"==",
+					"amenity",
+					"school"
+				],
+				[
+					"==",
+					"landuse",
+					"religious"
+				],
+				[
+					"==",
+					"office",
+					"government"
+				]
+			]
+		}
+	],
+	"imagery": "http://a.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.jpg?access_token=",
+	"background_ratio": 1,
+	"ml_type": "object-detection"
+}

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  geokit:
+    image: developmentseed/label-maker-imgs:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
