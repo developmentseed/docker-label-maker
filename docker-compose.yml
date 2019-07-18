@@ -1,9 +1,13 @@
 version: '3'
 services:
-  geokit:
+  exec-label-maker:
     image: developmentseed/label-maker-imgs:latest
     build:
       context: ./
       dockerfile: Dockerfile
     volumes:
       - ./:/usr/src/app
+    command: >
+      /bin/bash -c "
+      echo Starting ...;
+      ./start.sh"
