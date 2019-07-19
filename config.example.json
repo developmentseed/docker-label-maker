@@ -1,41 +1,176 @@
 {
-	"country": "monaco",
+	"country": "united_republic_of_tanzania",
 	"bounding_box": [
-		7.3323441,43.708370,7.4888992,43.777819
+		39.184456,-6.8790072,39.356117,-6.7317368
 	],
-	"zoom": 12,
+	"zoom": 18,
 	"classes": [
 		{
-			"name": "Buildings",
-			"filter": [
-				"any",
-				[
-					"==",
-					"amenity",
-					"hospital"
+            "name": "hospital",
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "amenity",
+                    "hospital"
+				],
+                [
+                    "==",
+                    "amenity",
+                    "clinic"
+                ],				
+                [
+                    "==",
+                    "building",
+                    "hospital"
+                ]
+            ]
+        },
+        {
+            "name": "university",
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "amenity",
+                    "university"
+				],
+                [
+                    "==",
+                    "amenity",
+                    "college"
+				],				
+                [
+                    "==",
+                    "building",
+                    "university"
 				],
 				[
-					"==",
-					"amenity",
-					"university"
+                    "==",
+                    "landuse",
+                    "university"
+                ]
+            ]
+		},
+		{
+            "name": "school",
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "amenity",
+                    "school"
 				],
 				[
-					"==",
-					"amenity",
-					"school"
+                    "==",
+                    "amenity",
+                    "kindergarten"
+				],
+                [
+                    "==",
+                    "building",
+                    "school"
+                ]
+            ]
+		},
+		{
+            "name": "place_of_worship",
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "amenity",
+                    "place_of_worship"
+                ],
+                [
+                    "==",
+                    "building",
+                    "place_of_worship"
 				],
 				[
-					"==",
-					"landuse",
-					"religious"
+                    "==",
+                    "building",
+                    "church"
 				],
 				[
-					"==",
-					"office",
-					"government"
+                    "==",
+                    "building",
+                    "cathedral"
+				],
+				[
+                    "==",
+                    "building",
+                    "chapel"
+				],
+				[
+                    "==",
+                    "building",
+                    "mosque"
+				],
+				[
+                    "==",
+                    "building",
+                    "synagogue"
+				],
+				[
+                    "==",
+                    "building",
+                    "temple"
+				],
+				[
+                    "==",
+                    "building",
+                    "shrine"
+				],
+				[
+                    "==",
+                    "landuse",
+                    "place_of_worship"
+				],
+				[
+                    "==",
+                    "landuse",
+                    "religious"
 				]
-			]
-		}
+				
+            ]
+		},
+		{
+            "name": "government",
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "amenity",
+                    "courthouse"
+                ],
+                [
+                    "==",
+                    "office",
+                    "government"
+				],
+				[
+                    "==",
+                    "government",
+                    "ministry"
+				],
+				[
+                    "==",
+                    "government",
+                    "prosecutor"
+				],
+				[
+                    "==",
+                    "government",
+                    "tax"
+				],
+				[
+                    "==",
+                    "government",
+                    "register_office"
+                ]
+            ]
+        }
 	],
 	"imagery": "http://a.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.jpg?access_token=",
 	"background_ratio": 1,
