@@ -9,166 +9,91 @@
             "name": "hospital",
             "filter": [
                 "any",
-                [
-                    "==",
-                    "amenity",
-                    "hospital"
-				],
-                [
-                    "==",
-                    "amenity",
-                    "clinic"
-                ],				
-                [
-                    "==",
-                    "building",
-                    "hospital"
-                ]
+                ["==","amenity","hospital"],
+                ["==","amenity","clinic"],				
+                ["==","building","hospital"]
             ]
         },
         {
             "name": "university",
             "filter": [
                 "any",
-                [
-                    "==",
-                    "amenity",
-                    "university"
-				],
-                [
-                    "==",
-                    "amenity",
-                    "college"
-				],				
-                [
-                    "==",
-                    "building",
-                    "university"
-				],
-				[
-                    "==",
-                    "landuse",
-                    "university"
-                ]
+                ["==","amenity","university"],
+                ["==","amenity","college"],				
+                ["==","building","university"],
+				["==","landuse","university"]
             ]
 		},
 		{
             "name": "school",
             "filter": [
                 "any",
-                [
-                    "==",
-                    "amenity",
-                    "school"
-				],
-				[
-                    "==",
-                    "amenity",
-                    "kindergarten"
-				],
-                [
-                    "==",
-                    "building",
-                    "school"
-                ]
+                ["==","amenity","school"],
+				["==","amenity","kindergarten"],
+                ["==","building","school"]
             ]
 		},
 		{
             "name": "place_of_worship",
             "filter": [
                 "any",
-                [
-                    "==",
-                    "amenity",
-                    "place_of_worship"
-                ],
-                [
-                    "==",
-                    "building",
-                    "place_of_worship"
-				],
-				[
-                    "==",
-                    "building",
-                    "church"
-				],
-				[
-                    "==",
-                    "building",
-                    "cathedral"
-				],
-				[
-                    "==",
-                    "building",
-                    "chapel"
-				],
-				[
-                    "==",
-                    "building",
-                    "mosque"
-				],
-				[
-                    "==",
-                    "building",
-                    "synagogue"
-				],
-				[
-                    "==",
-                    "building",
-                    "temple"
-				],
-				[
-                    "==",
-                    "building",
-                    "shrine"
-				],
-				[
-                    "==",
-                    "landuse",
-                    "place_of_worship"
-				],
-				[
-                    "==",
-                    "landuse",
-                    "religious"
-				]
-				
+                ["==","amenity","place_of_worship"],
+                ["==","building","place_of_worship"],
+				["==","building","church"],
+				["==","building","cathedral"],
+				["==","building","chapel"],
+				["==","building","mosque"],
+				["==","building","synagogue"],
+				["==","building","temple"],
+				["==","building","shrine"],
+				["==","landuse","place_of_worship"],
+				["==","landuse","religious"]
             ]
 		},
 		{
             "name": "government",
             "filter": [
                 "any",
-                [
-                    "==",
-                    "amenity",
-                    "courthouse"
-                ],
-                [
-                    "==",
-                    "office",
-                    "government"
-				],
-				[
-                    "==",
-                    "government",
-                    "ministry"
-				],
-				[
-                    "==",
-                    "government",
-                    "prosecutor"
-				],
-				[
-                    "==",
-                    "government",
-                    "tax"
-				],
-				[
-                    "==",
-                    "government",
-                    "register_office"
-                ]
+                ["==","amenity","courthouse"],
+                ["==","office","government"],
+				["==","government","ministry"],
+				["==","government","prosecutor"],
+				["==","government","tax"],
+				["==","government","register_office"]
+            ]
+        },
+        {
+            "name": "residential_buildings",
+            "filter": [
+                "all",
+                ["has", "building"],
+                ["!=","amenity","hospital"],
+                ["!=","amenity","clinic"],
+                ["!=","building","hospital"],
+                ["!=","amenity","university"],
+                ["!=","amenity","college"],
+                ["!=","building","university"],
+                ["!=","landuse","university"],
+                ["!=","amenity","school"],
+                ["!=","amenity","kindergarten"],
+                ["!=","building","school"],
+                ["!=","amenity","place_of_worship"],
+                ["!=","building","place_of_worship"],
+                ["!=","building","church"],
+                ["!=","building","cathedral"],
+                ["!=","building","chapel"],
+                ["!=","building","mosque"],
+                ["!=","building","synagogue"],
+                ["!=","building","temple"],
+                ["!=","building","shrine"],
+                ["!=","landuse","place_of_worship"],
+                ["!=","landuse","religious"],
+                ["!=","amenity","courthouse"],
+                ["!=","office","government"],
+                ["!=","government","ministry"],
+                ["!=","government","prosecutor"],
+                ["!=","government","tax"],
+                ["!=","government","register_office"]
             ]
         }
 	],
