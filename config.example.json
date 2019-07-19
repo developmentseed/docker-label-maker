@@ -174,5 +174,5 @@
 	],
 	"imagery": "http://a.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.jpg?access_token=",
 	"background_ratio": 1,
-	"ml_type": "object-detection"
+    "ml_type": "classification"
 }
