@@ -11,7 +11,8 @@
                 "any",
                 ["==","amenity","hospital"],
                 ["==","amenity","clinic"],				
-                ["==","building","hospital"]
+                ["==","building","hospital"],
+                ["==","landuse","hospital"]
             ]
         },
         {
@@ -30,7 +31,10 @@
                 "any",
                 ["==","amenity","school"],
 				["==","amenity","kindergarten"],
-                ["==","building","school"]
+                ["==","building","school"],
+                ["==","landuse","school"],
+                ["==","building","kindergarten"],
+                ["==","landuse","kindergarten"]
             ]
 		},
 		{
@@ -59,7 +63,9 @@
 				["==","government","ministry"],
 				["==","government","prosecutor"],
 				["==","government","tax"],
-				["==","government","register_office"]
+				["==","government","register_office"],
+                ["==","office","administrative"],
+                ["==","building","government"]
             ]
         },
         {
