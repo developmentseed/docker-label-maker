@@ -76,6 +76,7 @@
                 ["!=","amenity","hospital"],
                 ["!=","amenity","clinic"],
                 ["!=","building","hospital"],
+                ["!=","landuse","hospital"],
                 ["!=","amenity","university"],
                 ["!=","amenity","college"],
                 ["!=","building","university"],
@@ -83,6 +84,9 @@
                 ["!=","amenity","school"],
                 ["!=","amenity","kindergarten"],
                 ["!=","building","school"],
+                ["!=","landuse","school"],
+                ["!=","building","kindergarten"],
+                ["!=","landuse","kindergarten"],
                 ["!=","amenity","place_of_worship"],
                 ["!=","building","place_of_worship"],
                 ["!=","building","church"],
@@ -99,7 +103,9 @@
                 ["!=","government","ministry"],
                 ["!=","government","prosecutor"],
                 ["!=","government","tax"],
-                ["!=","government","register_office"]
+                ["!=","government","register_office"],
+                ["!=","office","administrative"],
+                ["!=","building","government"]
             ]
         }
 	],
