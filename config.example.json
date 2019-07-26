@@ -10,7 +10,7 @@
             "filter": [
                 "any",
                 ["==","amenity","hospital"],
-                ["==","amenity","clinic"],				
+                ["==","amenity","clinic"],
                 ["==","building","hospital"],
                 ["==","landuse","hospital"]
             ]
@@ -20,9 +20,9 @@
             "filter": [
                 "any",
                 ["==","amenity","university"],
-                ["==","amenity","college"],				
+                ["==","amenity","college"],             
                 ["==","building","university"],
-				["==","landuse","university"]
+                ["==","landuse","university"]
             ]
 		},
 		{
@@ -30,7 +30,7 @@
             "filter": [
                 "any",
                 ["==","amenity","school"],
-				["==","amenity","kindergarten"],
+                ["==","amenity","kindergarten"],
                 ["==","building","school"],
                 ["==","landuse","school"],
                 ["==","building","kindergarten"],
@@ -41,31 +41,82 @@
             "name": "place_of_worship",
             "filter": [
                 "any",
-                ["==","amenity","place_of_worship"],
                 ["==","building","place_of_worship"],
-				["==","building","church"],
-				["==","building","cathedral"],
-				["==","building","chapel"],
-				["==","building","mosque"],
-				["==","building","synagogue"],
-				["==","building","temple"],
-				["==","building","shrine"],
-				["==","landuse","place_of_worship"],
-				["==","landuse","religious"]
+                ["==","building","church"],
+                ["==","building","cathedral"],
+                ["==","building","chapel"],
+                ["==","building","mosque"],
+                ["==","building","synagogue"],
+                ["==","building","temple"],
+                ["==","building","shrine"],
+                ["==","amenity","place_of_worship"],  
+                ["==","landuse","place_of_worship"],
+                ["==","landuse","religious"]
             ]
 		},
 		{
             "name": "government",
             "filter": [
                 "any",
+                ["==","building","government"],
+                ["==","building","civic"],
                 ["==","amenity","courthouse"],
                 ["==","office","government"],
-				["==","government","ministry"],
-				["==","government","prosecutor"],
-				["==","government","tax"],
-				["==","government","register_office"],
+                ["==","government","ministry"],
+                ["==","government","prosecutor"],
+                ["==","government","tax"],
+                ["==","government","register_office"],
                 ["==","office","administrative"],
-                ["==","building","government"]
+                ["==","amenity","library"],
+                ["==","amenity","community_centre"],
+                ["==","amenity","townhall"]
+
+            ]
+        },
+        {
+            "name": "transportation",
+            "filter": [
+                "any",
+                ["==","building","transportation"],
+                ["==","building","train_station"],
+                ["==","public_transport","transportation"],
+                ["==","aeroway","hangar"]
+            ]
+        },
+        {
+            "name": "commercial",
+            "filter": [
+                "any",
+                ["==","building","supermarket"],
+                ["==","building","commercial"],
+                ["==","shop","supermarket"],
+                ["==","shop","department_store"],
+                ["==","shop","mall"],
+                ["==","landuse","commercial"]
+            ]
+        },
+        {
+            "name": "industry",
+            "filter": [
+                "any",
+                ["==","building","industrial"],
+                ["==","building","warehouse"],
+                ["==","building","production_hall"],
+                ["==","building","high_bay_warehouse"],
+                ["==","landuse","industrial"],
+                ["==","power","plant"],
+                ["==","power","substation"],
+                ["==","power","station"]
+            ]
+        },
+        {
+            "name": "sport_stadium",
+            "filter": [
+                "any",
+                ["==","building","stadium"],
+                ["==","leisure","stadium"],
+                ["==","leisure","sports_centre"],
+                ["==","leisure","fitness_centre"]
             ]
         },
         {
@@ -78,7 +129,7 @@
                 ["!=","building","hospital"],
                 ["!=","landuse","hospital"],
                 ["!=","amenity","university"],
-                ["!=","amenity","college"],
+                ["!=","amenity","college"],             
                 ["!=","building","university"],
                 ["!=","landuse","university"],
                 ["!=","amenity","school"],
@@ -87,7 +138,6 @@
                 ["!=","landuse","school"],
                 ["!=","building","kindergarten"],
                 ["!=","landuse","kindergarten"],
-                ["!=","amenity","place_of_worship"],
                 ["!=","building","place_of_worship"],
                 ["!=","building","church"],
                 ["!=","building","cathedral"],
@@ -96,8 +146,11 @@
                 ["!=","building","synagogue"],
                 ["!=","building","temple"],
                 ["!=","building","shrine"],
+                ["!=","amenity","place_of_worship"],  
                 ["!=","landuse","place_of_worship"],
                 ["!=","landuse","religious"],
+                ["!=","building","government"],
+                ["!=","building","civic"],
                 ["!=","amenity","courthouse"],
                 ["!=","office","government"],
                 ["!=","government","ministry"],
@@ -105,7 +158,31 @@
                 ["!=","government","tax"],
                 ["!=","government","register_office"],
                 ["!=","office","administrative"],
-                ["!=","building","government"]
+                ["!=","amenity","library"],
+                ["!=","amenity","community_centre"],
+                ["!=","amenity","townhall"],
+                ["!=","building","transportation"],
+                ["!=","building","train_station"],
+                ["!=","public_transport","transportation"],
+                ["!=","aeroway","hangar"],
+                ["!=","building","supermarket"],
+                ["!=","building","commercial"],
+                ["!=","shop","supermarket"],
+                ["!=","shop","department_store"],
+                ["!=","shop","mall"],
+                ["!=","landuse","commercial"],
+                ["!=","building","industrial"],
+                ["!=","building","warehouse"],
+                ["!=","building","production_hall"],
+                ["!=","building","high_bay_warehouse"],
+                ["!=","landuse","industrial"],
+                ["!=","power","plant"],
+                ["!=","power","substation"],
+                ["!=","power","station"],
+                ["!=","building","stadium"],
+                ["!=","leisure","stadium"],
+                ["!=","leisure","sports_centre"],
+                ["!=","leisure","fitness_centre"]
             ]
         }
 	],
