@@ -110,7 +110,7 @@
             ]
         },
         {
-            "name": "sport_stadium",
+            "name": "sports",
             "filter": [
                 "any",
                 ["==","building","stadium"],
@@ -120,7 +120,7 @@
             ]
         },
         {
-            "name": "residential_buildings",
+            "name": "residential",
             "filter": [
                 "all",
                 ["has", "building"],
