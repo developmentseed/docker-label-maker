@@ -1,7 +1,7 @@
 # Running label-maker from docker container
 
 ```
-git clone https://github.com/Rub21/exec-label-maker.git
+git clone https://github.com/Rub21/docker-label-maker.git
 cd exec-label-maker/
 docker-compose build
 docker-compose up
