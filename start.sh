@@ -1,5 +1,4 @@
 #!/bin/bash
-# In case there are more than one bbox to evaluate.
 bboxesFile=bboxes.txt
 if [ -f $bboxesFile ]; then
    index=1
