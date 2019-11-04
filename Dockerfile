@@ -9,7 +9,8 @@ RUN apt-get install -y \
     libcurl4-openssl-dev \
     libssl-dev \
     wget \
-    git
+    git \
+    jq
 
 # Install tippecanoe
 RUN git clone --progress https://github.com/mapbox/tippecanoe.git && \
