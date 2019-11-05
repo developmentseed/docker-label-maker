@@ -34,7 +34,7 @@ RUN mv -f $workdir/protoc3/bin/* /usr/local/bin/
 RUN mv -f $workdir/protoc3/include/* /usr/local/include/
 RUN ln -s -f /usr/local/bin/protoc /usr/bin/protoc
 
-RUN git clone --progress https://github.com/developmentseed/label-maker.git $workdir/label-maker && cd $workdir/label-maker
+RUN git clone https://github.com/developmentseed/label-maker.git $workdir/label-maker && cd $workdir/label-maker
 WORKDIR $workdir
 VOLUME $workdir
 COPY start.sh $workdir
