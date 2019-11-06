@@ -11,16 +11,13 @@ RUN apt-get install -y \
     wget \
     git \
     jq
+RUN pip install --upgrade pip
 
 # Install tippecanoe
 RUN git clone --progress https://github.com/mapbox/tippecanoe.git && \
     cd tippecanoe && \
     make -j && \
     make install
-
-# Install label-maker
-RUN pip install \
-    label-maker==0.3.1 --ignore-installed pycurl
 
 # Install remaining python dependencies
 RUN pip install \
@@ -34,8 +31,8 @@ RUN mv -f $workdir/protoc3/bin/* /usr/local/bin/
 RUN mv -f $workdir/protoc3/include/* /usr/local/include/
 RUN ln -s -f /usr/local/bin/protoc /usr/bin/protoc
 
-RUN git clone https://github.com/developmentseed/label-maker.git $workdir/label-maker && cd $workdir/label-maker
+# Install label-maker
+RUN git clone https://github.com/developmentseed/label-maker.git $workdir/label-maker && cd $workdir/label-maker && pip install -e . --ignore-installed pycurl
 WORKDIR $workdir
 VOLUME $workdir
 COPY start.sh $workdir
-# CMD ["bash", "start.sh"]
