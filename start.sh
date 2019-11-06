@@ -7,7 +7,9 @@ if [ -f $bboxesFile ]; then
         dest=$(cat config.json | jq '.country')
         dest="${dest//\"}"
         configFile="${dest}_area${index}_config.json"
-        mkdir $dest
+        if [ ! -d "$dest" ]; then
+            mkdir $dest
+        fi
         cat config.json | jq '.bounding_box='$bbox > $dest/$configFile
         echo "Processing $configFile ..."
         if [ ! -f "$dest/$dest.mbtiles" ]; then
