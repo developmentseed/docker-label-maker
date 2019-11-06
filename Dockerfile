@@ -1,5 +1,5 @@
 FROM python:3.6
-LABEL maintainer="Rub21"
+LABEL maintainer="developmentseed"
 
 ENV workdir /usr/src/app
 RUN mkdir $workdir
@@ -34,9 +34,5 @@ RUN mv -f $workdir/protoc3/bin/* /usr/local/bin/
 RUN mv -f $workdir/protoc3/include/* /usr/local/include/
 RUN ln -s -f /usr/local/bin/protoc /usr/bin/protoc
 
-RUN git clone https://github.com/developmentseed/label-maker.git $workdir/label-maker && cd $workdir/label-maker
 WORKDIR $workdir
 VOLUME $workdir
-COPY start.sh $workdir
-
-# CMD ["bash", "start.sh"]
