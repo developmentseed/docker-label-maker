@@ -1,8 +1,9 @@
-FROM tensorflow/tensorflow:1.8.0-py3
+FROM python:3.6
 LABEL maintainer="Rub21"
-ENV workdir /usr/src/app
 
+ENV workdir /usr/src/app
 RUN mkdir $workdir
+
 RUN apt-get update -y
 RUN apt-get install -y \
     libsqlite3-dev \
@@ -18,9 +19,8 @@ RUN git clone --progress https://github.com/mapbox/tippecanoe.git && \
     make -j && \
     make install
 
-# Install label-maker
 RUN pip install \
-    label-maker==0.3.1 --ignore-installed pycurl
+  label-maker==0.6.0 --ignore-installed pycurl
 
 # Install remaining python dependencies
 RUN pip install \
@@ -38,4 +38,5 @@ RUN git clone https://github.com/developmentseed/label-maker.git $workdir/label-
 WORKDIR $workdir
 VOLUME $workdir
 COPY start.sh $workdir
+
 # CMD ["bash", "start.sh"]
