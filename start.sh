@@ -5,9 +5,8 @@ dest="${dest//\"}"
 configFile="config.json"
 if [ ! -d "$dest" ]; then
     mkdir $dest
-    cp $configFile $dest/$configFile
 fi
-
+cp $configFile $dest/
 bboxesFile=bboxes.txt
 if [ -f $bboxesFile ]; then
    index=1
