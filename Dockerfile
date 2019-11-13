@@ -20,7 +20,7 @@ RUN git clone --progress https://github.com/mapbox/tippecanoe.git && \
     make install
 
 RUN pip install \
-  label-maker==0.6.0 --ignore-installed pycurl
+  label-maker==0.6.1 --ignore-installed pycurl
 
 # Install remaining python dependencies
 RUN pip install \
