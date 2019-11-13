@@ -19,9 +19,6 @@ RUN git clone --progress https://github.com/mapbox/tippecanoe.git && \
     make -j && \
     make install
 
-RUN pip install \
-  label-maker==0.6.1 --ignore-installed pycurl
-
 # Install remaining python dependencies
 RUN pip install \
     Cython==0.28.2 \
@@ -33,6 +30,8 @@ RUN unzip $workdir/protoc-3.2.0-linux-x86_64.zip -d $workdir/protoc3
 RUN mv -f $workdir/protoc3/bin/* /usr/local/bin/
 RUN mv -f $workdir/protoc3/include/* /usr/local/include/
 RUN ln -s -f /usr/local/bin/protoc /usr/bin/protoc
+
+RUN git clone https://github.com/developmentseed/label-maker.git && cd label-maker  && git checkout 0.6.1 && python setup.py install
 
 WORKDIR $workdir
 VOLUME $workdir
