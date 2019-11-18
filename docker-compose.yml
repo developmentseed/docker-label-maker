@@ -1,7 +1,7 @@
 version: '3'
 services:
-  docker-label-maker:
-    image: developmentseed/docker-label-maker:latest
+  label-maker:
+    image: developmentseed/label-maker:latest
     build:
       context: ./
       dockerfile: Dockerfile

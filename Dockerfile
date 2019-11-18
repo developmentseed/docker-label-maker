@@ -35,3 +35,4 @@ RUN git clone https://github.com/developmentseed/label-maker.git && cd label-mak
 
 WORKDIR $workdir
 VOLUME $workdir
+CMD ["/bin/bash"]
