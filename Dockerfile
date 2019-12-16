@@ -31,7 +31,7 @@ RUN mv -f $workdir/protoc3/bin/* /usr/local/bin/
 RUN mv -f $workdir/protoc3/include/* /usr/local/include/
 RUN ln -s -f /usr/local/bin/protoc /usr/bin/protoc
 
-RUN git clone https://github.com/developmentseed/label-maker.git && cd label-maker  && git checkout 0.6.0 && python setup.py install
+RUN git clone https://github.com/developmentseed/label-maker.git && cd label-maker  && git checkout 0.7.0 && python setup.py install
 
 WORKDIR $workdir
 VOLUME $workdir
