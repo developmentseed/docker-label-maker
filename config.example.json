@@ -187,7 +187,7 @@
         }
 	],
 	"imagery": "http://a.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.jpg?access_token=",
-	"background_ratio": 1,
+	"background_ratio": 100,
     "ml_type": "classification",
     "seed": 19,
     "split_names": ["train", "val", "test"],
