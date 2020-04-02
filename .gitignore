@@ -3,3 +3,5 @@ data/
 configs/
 bboxes.txt
 peru/
+*.geojson
+*.json
